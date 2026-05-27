@@ -1,0 +1,161 @@
+.find-os-page {
+  min-height: 100svh;
+  background: var(--dark-choc, #2c1810);
+  color: var(--cream, #fff8ed);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.find-os-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 65% 45% at 50% 0%, rgba(232, 168, 51, 0.15), transparent 70%),
+    radial-gradient(ellipse 70% 50% at 50% 100%, rgba(196, 122, 43, 0.18), transparent 70%);
+}
+
+.find-os-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 760px;
+  text-align: center;
+}
+
+.find-os-label {
+  color: var(--gold, #e8a833);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.find-os-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3.5rem, 8vw, 5.5rem);
+  line-height: 1;
+  color: var(--cream, #fff8ed);
+  margin-bottom: 3.5rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  margin-bottom: 3.5rem;
+}
+
+.social-card {
+  width: 245px;
+  min-height: 220px;
+  border: 1px solid rgba(232, 168, 51, 0.28);
+  border-radius: 24px;
+  background: rgba(255, 248, 237, 0.035);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--cream, #fff8ed);
+  text-decoration: none;
+  transition: transform 0.25s ease, border-color 0.25s ease,
+    background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--gold, #e8a833);
+  background: rgba(232, 168, 51, 0.08);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.25);
+}
+
+.social-icon {
+  font-size: 3.1rem;
+  color: var(--gold, #e8a833);
+  margin-bottom: 0.3rem;
+}
+
+.social-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.social-username {
+  color: var(--warm, #f5e6c8);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.back-btn {
+  display: inline-block;
+  border: 1px solid var(--gold, #e8a833);
+  color: var(--gold, #e8a833);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2.8rem;
+  border-radius: 100px;
+  transition: background 0.25s ease, color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.back-btn:hover {
+  background: var(--gold, #e8a833);
+  color: var(--dark-choc, #2c1810);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .find-os-page {
+    align-items: flex-start;
+    padding: 5.5rem 1.25rem 3rem;
+  }
+
+  .find-os-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+  }
+
+  .find-os-title {
+    font-size: clamp(3.2rem, 17vw, 4.2rem);
+    margin-bottom: 2.7rem;
+  }
+
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+    margin-bottom: 2.8rem;
+  }
+
+  .social-card {
+    width: 100%;
+    max-width: 330px;
+    min-height: 155px;
+    border-radius: 20px;
+    gap: 0.55rem;
+  }
+
+  .social-icon {
+    font-size: 2.6rem;
+  }
+
+  .social-name {
+    font-size: 1.3rem;
+  }
+
+  .back-btn {
+    width: 100%;
+    max-width: 330px;
+    padding: 1rem;
+  }
+}
